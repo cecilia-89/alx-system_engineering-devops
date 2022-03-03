@@ -1,0 +1,2 @@
+#!/bin/bash
+sodu chown --from=guillaume betty hello
