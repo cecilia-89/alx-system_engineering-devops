@@ -1,2 +1,2 @@
 #!/bin/bash
-sodu chown --from=betty guillaume hello
+sodu chown --from=guillaume betty hello
