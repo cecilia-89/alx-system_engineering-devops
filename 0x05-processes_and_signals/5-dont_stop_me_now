@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #kills all processes
-pid=$(4-to_infinity_and_beyond)
-kill "$pid"
+pid=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
+kill -15 "$pid"
