@@ -11,7 +11,7 @@ term() {
 while ((1)) 
 do
 echo "To infinity and beyond"
-trap 'echo "I hate the kill command"' 15
-trap 'echo "Y U no love me?!" && term()' 2
+trap 'echo "Y U no love me?!"' 2
+trap 'echo "I hate the kill command" && term()' 15
 trap 'term()' 3
 done
