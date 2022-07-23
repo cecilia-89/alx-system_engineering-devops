@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #kills all processes
-name=$("bash ./7-highlander" -f)
-pkill -9 "$name"
+pkill -9 "bash ./7-highlander" -f`
