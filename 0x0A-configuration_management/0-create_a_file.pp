@@ -1,7 +1,6 @@
 #create a file called school
 
-file {
-    'school':
+file {  'school':
     path  => '/tmp/school',
   content => 'I love Puppet',
     group => 'www-data',
