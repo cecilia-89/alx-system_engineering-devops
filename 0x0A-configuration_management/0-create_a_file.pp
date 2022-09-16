@@ -1,4 +1,4 @@
-#create a file called school
+# Create a file called school
 
 file {  'school':
     path  => '/tmp/school',
