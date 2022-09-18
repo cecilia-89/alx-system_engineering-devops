@@ -122,4 +122,4 @@ Subsystem       sftp    /usr/lib/openssh/sftp-server
 #       X11Forwarding no
 #       AllowTcpForwarding no
 #       PermitTTY no
-#       ForceCommand cvs server
+#       ForceCommand cvs serve
