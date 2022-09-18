@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# ssh into a server
+
+ssh ubuntu@3.225.221.42
