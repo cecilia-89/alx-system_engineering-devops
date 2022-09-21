@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Fix my server with this magic 2 line
 
-/etc/init.d/apache2 start
+sudo /etc/init.d/apache2 start
