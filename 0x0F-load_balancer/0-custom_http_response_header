@@ -3,6 +3,27 @@
 
 sudo apt update
 sudo apt install -y nginx
-sed -i '65i add_header X-Served-By 26622-web-01;' /etc/nginx/nginx.conf
-sed -i '66i add_header X-Served-By 26622-web-02;' /etc/nginx/nginx.conf
+echo 'Hello World!' > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+server_config=\
+"server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	root /var/www/html;
+	index index.html index.htm index.nginx-debian.html;
+	server_name _;
+	add_header X-Served-By \$hostname;
+	location / {
+		try_files \$uri \$uri/ =404;
+	}
+	if (\$request_filename ~ redirect_me){
+		rewrite ^ https://sketchfab.com/bluepeno/models permanent;
+	}
+	error_page 404 /404.html;
+	location = /404.html {
+		internal;
+	}
+}"
+
+echo "$server_config" > /etc/nginx/sites-enabled/default
 sudo service nginx restart
