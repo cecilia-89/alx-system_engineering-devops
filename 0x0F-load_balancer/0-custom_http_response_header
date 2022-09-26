@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#installs nginx server
+
+sudo apt update
+sudo apt install -y nginx
+sed -i '65i add_header X-Served-By 26622-web-01;'
+sed -i 'add_header X-Served-By 26622-web-02;'
+sudo service nginx restart
