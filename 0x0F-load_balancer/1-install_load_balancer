@@ -2,7 +2,9 @@
 #installs nginx server
 
 sudo apt update
-sudo apt install -y nginx
-sed -i '65i add_header X-Served-By 26622-web-01;' /etc/nginx/nginx.conf
-sed -i '66i add_header X-Served-By 26622-web-02;' /etc/nginx/nginx.conf
-sudo service nginx restart
+apt-get install --no-install-recommends software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.6
+apt-get install haproxy=2.6.\*
+sudo sed -i -e '$aENABLED=1\n' /etc/default/haproxy
+sudo sed -i -e '$a\listen http-in\n\tbind :80\n\tbalance roundrobin\n\tserver 525-web-01 35.231.216.93:80 check\n\tserver 525-web-02 35.196.0.213:80 check\n' /etc/haproxy/haproxy.cfg
+service haproxy restart
