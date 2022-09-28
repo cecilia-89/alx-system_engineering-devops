@@ -4,9 +4,5 @@
 sudo apt update
 sudo apt install -y nginx
 echo "Hello World" > /var/www/html/index.html
-printf %s "location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                rewrite ^/redirect_me(/*)$ https://www.youtube.com permanent;
-        }" > /etc/nginx/sites-available/default
+sudo sed -i '47a redirect 301 ^/redirect_me(/*) https://www.youtube.com permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
