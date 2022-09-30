@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #displays information about the specified subdomain
+
 if (($# == 1))
 then
 	subdomain=(www lb-01 web-01 web-02)
 else
-	subdomain=($2)
+	subdomain=("$2")
 fi
 
 domain () {
