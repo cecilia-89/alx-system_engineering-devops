@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #displays information about the specified subdomain
-
+#/etc/letsencrypt/live/www.nginx-server.tech/fullchain.pem
+#/etc/letsencrypt/live/www.nginx-server.tech/privkey.pem
 if (($# == 1))
 then
 	subdomain=(www lb-01 web-01 web-02)
