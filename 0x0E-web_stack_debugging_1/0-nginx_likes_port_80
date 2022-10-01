@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Configuring web server
 
-sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/sites-enabled/sites-available/' /etc/nginx/nginx.conf
 sudo service nginx restart
-curl -sI localhost:80
