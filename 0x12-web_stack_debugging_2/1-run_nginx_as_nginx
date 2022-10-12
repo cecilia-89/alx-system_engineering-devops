@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # configure nginx server to run as nginx server
-sudo sed -i "s/80 default_server/8080 default_server/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-enabled/default
 pkill apache2
 sudo -u nginx service nginx restart
