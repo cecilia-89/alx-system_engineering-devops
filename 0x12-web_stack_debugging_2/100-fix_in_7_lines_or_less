@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# configure nginx server to run as nginx server
-# run on port 8080
-
+# short fix for task 1
 sudo sed -i "s/user www-data/user nginx/" /etc/nginx/nginx.conf
 sudo sed -i "s/80 default_server/8080 default_server/" /etc/nginx/sites-enabled/default
 pkill apache2
