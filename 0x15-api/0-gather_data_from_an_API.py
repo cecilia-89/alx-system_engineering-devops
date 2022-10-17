@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """returns information about an employee's TODO list progress"""
-import requests
 from sys import argv
+import requests
 
 
 url = "https://jsonplaceholder.typicode.com/users/"
