@@ -3,8 +3,8 @@
 import requests
 from sys import argv
 
-url = "https://jsonplaceholder.typicode.com/users/"
 
+url = "https://jsonplaceholder.typicode.com/users/"
 user = requests.get(url + "{}".format(argv[1])).json()
 todos = requests.get(url + "{}/todos".format(argv[1])).json()
 tasks = [todo.get('title') for todo in todos if todo.get('completed') is True]
