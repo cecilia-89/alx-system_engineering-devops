@@ -19,5 +19,6 @@ if __name__ == "__main__":
         lst.append(dic)
 
     my_dict = {user.get('id'): lst}
+    
     with open("{}.json".format(user.get('id')), "w+") as f:
         json.dump(my_dict, f)
