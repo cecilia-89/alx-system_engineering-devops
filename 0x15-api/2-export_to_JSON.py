@@ -10,9 +10,9 @@ if __name__ == "__main__":
     user = requests.get(url + "{}".format(argv[1])).json()
     todos = requests.get(url + "{}/todos".format(argv[1])).json()
 
-    dic = {}
     lst = []
     for todo in todos:
+        dic = {}
         dic['task'] = todo.get('title')
         dic['completed'] = todo.get('completed')
         dic['username'] = user.get('username')
