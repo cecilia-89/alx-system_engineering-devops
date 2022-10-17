@@ -11,8 +11,9 @@ if __name__ == "__main__":
     todos = requests.get(url + "{}/todos".format(argv[1])).json()
 
     with open("{}.json".format(user.get('id')), "w+") as f:
-        json.dump({user.get('id'):
-                  [{"tasks": todo.get('title'),
+        json.dump({user.get('id'): [{
+                  "tasks": todo.get('title'),
                   "completed": todo.get('completed'),
-                  "username": user.get('username')} for todo in todos ]
+                  "username": user.get('username')}
+                  for todo in todos]
                   }, f)
