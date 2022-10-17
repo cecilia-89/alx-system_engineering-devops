@@ -10,15 +10,9 @@ if __name__ == "__main__":
     user = requests.get(url + "{}".format(argv[1])).json()
     todos = requests.get(url + "{}/todos".format(argv[1])).json()
 
-    lst = []
-    for todo in todos:
-        dic = {}
-        dic['task'] = todo.get('title')
-        dic['completed'] = todo.get('completed')
-        dic['username'] = user.get('username')
-        lst.append(dic)
-
-    my_dict = {user.get('id'): lst}
-    
     with open("{}.json".format(user.get('id')), "w+") as f:
-        json.dump(my_dict, f)
+        json.dump({user.get('id'):
+                  [{"tasks": todo.get('title'),
+                  "completed": todo.get('completed'),
+                  "username": user.get('username')} for todo in todos ]
+                  }, f)
