@@ -4,10 +4,7 @@
 On the 5th of November 2022, from 10:48 AM to 11:30 AM, all requests made to access the Catfish API resulted in an internal server error.
 100% of traffic was affected. Clients were not able to gain access to the API due to the service being down. The root cause of the problem was the server being overloaded with client requests.
 
-<img src="./images/Untitled (1).jpg"
-     alt="picture decipting a server error"
-	 title="Server error response"
-	 style="margin: 0 auto; max-width:100px">
+![My Image]("images/Untitled (1).jpg")
 
 
 ## Timeline (UTC):
