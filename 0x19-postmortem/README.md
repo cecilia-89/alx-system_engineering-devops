@@ -33,14 +33,16 @@ During the analysis of the crash, the following tasks were developed in order to
 - Install a load balancer to distribute client request
 - Set up more nginx servers in cause of outage or crash in one
 - Install another load balancer to avoid SPOF
+- monitor each load balancer
 - Add monitoring on each server memory
 - Add monitoring on each load balancer
 - Increase server memory space
 - set up a server for database
 - create a master-slave replication
+- add monitoring on both databases
 
 
-<img src="./images/Untitled (1).jpg"
+<img src="./images/Untitled (2).jpg"
      alt="picture decipting a server error">
 
 
