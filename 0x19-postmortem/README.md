@@ -4,8 +4,8 @@
 On the 5th of November 2022, from 10:48 AM to 11:30 AM, all requests made to access the Catfish API resulted in an internal server error.
 100% of traffic was affected. Clients were not able to gain access to the API due to the service being down. The root cause of the problem was the server being overloaded with client requests.
 
-![Picture decipting server error](./images/Untitled (1).jpg)
-
+<img src="./images/Untitled (1).jpg"
+     alt="picture decipting a server error">
 
 ## Timeline (UTC):
 - 10:48 AM monitoring system alerted system engineer of the crash
@@ -36,7 +36,12 @@ During the analysis of the crash, the following tasks were developed in order to
 - Add monitoring on each server memory
 - Add monitoring on each load balancer
 - Increase server memory space
+- set up a server for database
+- create a master-slave replication
 
+
+<img src="./images/Untitled (1).jpg"
+     alt="picture decipting a server error">
 
 
 
