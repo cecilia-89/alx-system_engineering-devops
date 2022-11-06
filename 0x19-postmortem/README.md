@@ -39,7 +39,7 @@ During the analysis of the crash, the following tasks were developed in order to
 - Increase server memory space
 - set up a server for database
 - create a master-slave replication
-- add monitoring on both databases
+- add monitoring on both master-slave database replication
 
 
 <img src="./images/Untitled (2).jpg"
