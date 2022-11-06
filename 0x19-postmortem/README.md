@@ -7,7 +7,7 @@ On the 5th of November 2022, from 10:48 AM to 11:30 AM, all requests made to acc
 <img src="./images/Untitled (1).jpg"
      alt="picture decipting a server error"
 	 title="Server error response"
-	 style="margin: 0 auto; max-width:300px">
+	 style="margin: 0 auto; max-width:100px">
 
 
 ## Timeline (UTC):
