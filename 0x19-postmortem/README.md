@@ -1,9 +1,9 @@
-# **POSTMORTEM**
----
+# <p align="center> **POSTMORTEM** </p>
 
 ## Issue Summary:
 On the 5th of November 2022, from 10:48 AM to 11:30 AM, all requests made to access the Catfish API resulted in an internal server error.
 100% of traffic was affected. Clients were not able to gain access to the API due to the service being down. The root cause of the problem was the server being overloaded with client requests.
+
 
 ## Timeline (UTC):
 - 10:48 AM monitoring system alerted system engineer of the crash
@@ -14,6 +14,7 @@ On the 5th of November 2022, from 10:48 AM to 11:30 AM, all requests made to acc
 - 11:22 AM server back up and running
 - 11:30 AM traffic back to 100%
 
+
 ## Root Cause:
 At 10:45 AM UTC the monitoring system alerted our system engineer who began to investigate the issue before it escalated.
 
@@ -23,15 +24,16 @@ At 10:57 AM the server was examined for any hardware failure. By 11:08, the cras
 
 The servers were started by 11:22 AM, 100% of the traffic that was automatically queued were routed to the servers by the load balancer.
 
+
 ## Corrective and Preventive Measures
 During the analysis of the crash, the following tasks were developed in order to prevent another occurrence and to improve recovery time.
 
-Install a load balancer to distribute client request
-Set up more nginx servers in cause of outage or crash in one
-Install another load balancer to avoid SPOF
-Add monitoring on each server memory
-Add monitoring on each load balancer
-Increase server memory space
+- Install a load balancer to distribute client request
+- Set up more nginx servers in cause of outage or crash in one
+- Install another load balancer to avoid SPOF
+- Add monitoring on each server memory
+- Add monitoring on each load balancer
+- Increase server memory space
 
 
 
