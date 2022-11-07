@@ -1,10 +1,6 @@
 #automates apache2 server
 
-package {'puppet':
-ensure  => installed
-}
-
-file {'index.html':
-ensure => file
-path   => '/var/www/html/index.html',
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
 }
